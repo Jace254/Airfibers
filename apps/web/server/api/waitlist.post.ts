@@ -28,7 +28,6 @@ export default defineLazyEventHandler(async () => {
             .zcard(key)
             .exec();
 
-        console.log(res)
         return res[1] as number
     })
 })
