@@ -23,6 +23,11 @@ export default defineConfig({
     'animate-accordion-up': 'accordion-up',
     'animate-accordion-down': 'accordion-down',
   },
+  theme: {
+    fontFamily: {
+      display: 'Mona Sans',
+    },
+  },
   presets: [
     presetUno(),
     presetIcons(),

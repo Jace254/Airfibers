@@ -1,6 +1,6 @@
 <div align="center">
     <h1 align="center">Airfibers</h1>
-    <h5>Cutting-edge WISP Business management</h5>
+    <h5>Cutting-edge WISP Business management platform</h5>
 </div>
 
 <div align="center">

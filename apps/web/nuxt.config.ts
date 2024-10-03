@@ -17,6 +17,7 @@ export default defineNuxtConfig({
 
   css: [
     '@unocss/reset/tailwind.css',
+    '@/styles/main.css'
   ],
   runtimeConfig: {
     public: {

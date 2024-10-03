@@ -1,0 +1,44 @@
+/* Mona Sans Variable Font */
+@font-face {
+  font-family: 'Mona Sans';
+  src: url('/fonts/Mona-Sans.woff2') format('woff2 supports variations'),
+       url('/fonts/Mona-Sans.woff2') format('woff2-variations');
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+  font-style: normal;
+}
+
+/* Mona Sans Italic Variable Font */
+@font-face {
+  font-family: 'Mona Sans';
+  src: url('/fonts/MonaSans-Italic.woff2') format('woff2 supports variations'),
+       url('/fonts/MonaSans-Italic.woff2') format('woff2-variations');
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+  font-style: italic;
+}
+
+/* Fallback for browsers that don't support variable fonts */
+@font-face {
+  font-family: 'Mona Sans';
+  src: url('/fonts/MonaSans-Regular.woff2') format('woff2'),
+       url('/fonts/MonaSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mona Sans';
+  src: url('/fonts/MonaSans-Bold.woff2') format('woff2'),
+       url('/fonts/MonaSans-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mona Sans';
+  src: url('/fonts/MonaSans-Italic.woff2') format('woff2'),
+       url('/fonts/MonaSans-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}

@@ -1,9 +1,6 @@
 import { Redis } from "@upstash/redis"
 
-
-
 let redis: Redis;
-
 
 export async function addToWaitlist(email: string): Promise<number> {
   const config = useRuntimeConfig()
@@ -14,6 +11,13 @@ export async function addToWaitlist(email: string): Promise<number> {
     })
   const key = "waitlist"
 
-  const res = await redis.pipeline().zadd(key, { score: Date.now(), member: email }).zcard(key).exec()
+  const res = await redis
+    .pipeline()
+    .zadd(key, {
+      score: Date.now(),
+      member: email
+    })
+    .zcard(key)
+    .exec()
   return res[1]
 }
