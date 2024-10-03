@@ -72,3 +72,25 @@ const submit = async () => {
         <Toaster />
     </main>
 </template>
+
+<style>
+/* Remove input background on autocomplete */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: inherit !important;
+}
+
+/* For Firefox */
+input:autofill {
+    background-color: transparent !important;
+    -webkit-text-fill-color: inherit !important;
+}
+
+/* Optional: If you want to remove the box-shadow as well */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+}
+</style>
