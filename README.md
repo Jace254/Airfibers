@@ -11,12 +11,16 @@
 
 ## Development
 
-```bash
-pnpm install
-pnpm build
-pnpm turbo run dev --filter=web
-```
-Now open localhost:3000
+1. Create `/apps/web/.env`
+
+2. Run
+
+  ```bash
+  pnpm install
+  pnpm build
+  pnpm turbo run dev --filter=web
+  ```
+3. Open localhost:3000
 
 ## Authors
 
