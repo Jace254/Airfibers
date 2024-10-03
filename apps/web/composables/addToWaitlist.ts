@@ -9,6 +9,8 @@ export async function addToWaitlist(email: string): Promise<number> {
       url: config.public.upstashRedisRestUrl!,
       token: config.public.upstashRedisRestToken!
     })
+
+  console.log(config.public.upstashRedisRestToken)
   const key = "waitlist"
 
   const res = await redis
