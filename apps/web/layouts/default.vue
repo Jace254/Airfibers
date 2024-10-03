@@ -1,4 +1,4 @@
-<script setup lang="ts">  
+<script setup lang="ts">
 useHead({
   htmlAttrs: {
     lang: 'en'
@@ -10,10 +10,12 @@ useHead({
     { property: 'og:description', content: 'Accelerate your WISP business' },
     { property: 'og:url', content: 'https://airfibers.com' },
     { property: 'og:site_name', content: 'airfibers.com' },
-    { property: 'og:image', content: 'https://airfibers.com/og.svg' },
+    { property: 'og:image', content: 'https://airfibers.vercel.app/og.svg' },
     { property: 'og:image:width', content: '1200' },
     { property: 'og:image:height', content: '675' },
-    { name: 'twitter:title', content: 'Airfibers' },
+    { name: 'twitter:title', content: 'Cutting-edge WISP Business Management' },
+    { name: 'twitter:image', content: 'https://airfibers.vercel.app/og.svg' },
+    { name: 'twitter:description', content: 'Accelerate your WISP business' },
     { name: 'twitter:card', content: 'summary_large_image' },
   ],
   link: [
@@ -33,10 +35,7 @@ useHead({
 </script>
 
 <template>
-    <div class="bg-black font-sans">
-      <slot />
-    </div>
+  <div class="bg-black font-sans">
+    <slot />
+  </div>
 </template>
-  
-
-  
