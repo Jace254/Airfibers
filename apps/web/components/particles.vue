@@ -20,7 +20,7 @@ interface Circle {
 }
 
 interface Props {
-  className?: string;
+  class?: string;
   quantity?: number;
   staticity?: number;
   ease?: number;
@@ -31,7 +31,7 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  className: '',
+  class: '',
   quantity: 30,
   staticity: 50,
   ease: 50,
@@ -221,7 +221,7 @@ watch(() => props.refresh, initCanvas);
 </script>
 
 <template>
-  <div :class="className" ref="canvasContainerRef" aria-hidden="true">
+  <div :class="class" ref="canvasContainerRef" aria-hidden="true">
     <canvas ref="canvasRef" />
   </div>
 </template>
