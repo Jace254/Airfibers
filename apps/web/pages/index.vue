@@ -86,11 +86,13 @@ input:-webkit-autofill:active {
 /* For Firefox */
 input:autofill {
     background-color: transparent !important;
+    color: white;
     -webkit-text-fill-color: inherit !important;
 }
 
 /* Optional: If you want to remove the box-shadow as well */
 input:-webkit-autofill {
+    color: white;
     -webkit-box-shadow: 0 0 0 30px transparent inset !important;
 }
 </style>
