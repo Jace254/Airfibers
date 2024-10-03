@@ -34,11 +34,11 @@ const submit = async () => {
         <Particles class="absolute inset-0 z-10 " :vy=-1 :quantity=50 :staticity=200 color="#7c3aed" />
         <div class="flex flex-col items-center my-4 md:my-8 lg:my-16 xl:my-24 z-20">
             <div
-                class="text-center text-6xl xl:text-7xl text-transparent bg-clip-text bg-gradient-to-t py-2 from-violet-100 to-zinc-600 font-display font-bold">
+                class="text-center md:text-6xl xl:text-7xl text-5xl text-transparent bg-clip-text bg-gradient-to-t py-2 from-violet-100 to-zinc-600 font-display font-bold">
                 Revolutionize your WISP Business
             </div>
-            <p class="text-center font-thin text-lg text-gray-300 mt-8 max-w-2xl">
-                Airfibers is a cutting-edge WISP Business Management platform. 
+            <p class="text-center font-thin text-sm xl:text-lg text-gray-300 mt-8 max-w-2xl">
+                Airfibers is a cutting-edge WISP Business Management platform.
                 <br>Grow your customer base with ease and get
                 realtime business analytics and insights.
             </p>
