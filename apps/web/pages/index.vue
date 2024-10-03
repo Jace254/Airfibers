@@ -38,8 +38,9 @@ const submit = async () => {
                 Revolutionize your WISP Business
             </div>
             <p class="text-center font-thin text-lg text-gray-300 mt-8 max-w-2xl">
-                Airfibers is a cutting-edge WISP business management platform. Grow your customer base with ease and get
-                realtime business analytics
+                Airfibers is a cutting-edge WISP Business Management platform. 
+                <br>Grow your customer base with ease and get
+                realtime business analytics and insights.
             </p>
             <span
                 class="rounded-full mt-8 bg-black/10 px-3 py-1 text-sm  leading-6 text-violet-200 ring-1 ring-inset ring-violet-100/20">
