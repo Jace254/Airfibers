@@ -21,8 +21,8 @@ export default defineNuxtConfig({
   ],
   runtimeConfig: {
     public: {
-      upstashRedisRestUrl: process.env.NUXT_UPSTASH_REDIS_REST_URL,
-      upstashRedisRestToken: process.env.NUXT_UPSTASH_REDIS_REST_TOKEN
+      upstashRedisRestUrl: '',
+      upstashRedisRestToken: ''
     }
   },
   ssr: true,
