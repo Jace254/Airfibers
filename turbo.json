@@ -1,0 +1,37 @@
+{
+    "$schema": "https://turborepo.org/schema.json",
+    "tasks": {
+      "install": {
+        "outputs": [
+          "node_modules/**",
+          "pnpm-lock.yaml",
+          "yarn.lock"
+        ]
+      },
+      "build": {
+        "dependsOn": [
+          "fmt",
+          "^build"
+        ],
+        "outputs": [
+          "dist/**",
+          ".nuxt/**"
+        ]
+      },
+      "fmt": {
+        "cache": false
+      },
+      "lint": {
+        "cache": false
+      },
+      "dev": {
+        "cache": false
+      },
+      "test": {
+        "cache": false
+      },
+      "start": {
+        "cache": false
+      }
+    }
+  }

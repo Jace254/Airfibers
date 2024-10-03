@@ -1,0 +1,30 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
+export default defineNuxtConfig({
+  modules: [
+    '@vueuse/nuxt',
+    '@unocss/nuxt',
+    'radix-vue/nuxt',
+    '@nuxt/image',
+    'nuxt-og-image'
+  ],
+  experimental: {
+    // when using generate, payload js assets included in sw precache manifest
+    // but missing on offline, disabling extraction it until fixed
+    payloadExtraction: false,
+    renderJsonPayloads: true,
+    typedPages: true,
+  },
+
+  css: [
+    '@unocss/reset/tailwind.css',
+  ],
+  runtimeConfig: {
+    public: {
+      upstashRedisRestUrl: process.env.NUXT_UPSTASH_REDIS_REST_URL,
+      upstashRedisRestToken: process.env.NUXT_UPSTASH_REDIS_REST_TOKEN
+    }
+  },
+  ssr: true,
+  compatibilityDate: '2024-04-03',
+  devtools: { enabled: true }
+})
