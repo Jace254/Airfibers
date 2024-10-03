@@ -20,10 +20,8 @@ export default defineNuxtConfig({
     '@/styles/main.css'
   ],
   runtimeConfig: {
-    public: {
-      upstashRedisRestUrl: '',
-      upstashRedisRestToken: ''
-    }
+    upstashRedisRestUrl: '',
+    upstashRedisRestToken: ''
   },
   ssr: true,
   compatibilityDate: '2024-04-03',
