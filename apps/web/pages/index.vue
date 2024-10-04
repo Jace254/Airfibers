@@ -80,19 +80,17 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
     transition: background-color 5000s ease-in-out 0s;
-    -webkit-text-fill-color: inherit !important;
+    -webkit-text-fill-color: white !important;
 }
 
 /* For Firefox */
 input:autofill {
     background-color: transparent !important;
-    color: white;
-    -webkit-text-fill-color: inherit !important;
+    -webkit-text-fill-color: white !important;
 }
 
 /* Optional: If you want to remove the box-shadow as well */
 input:-webkit-autofill {
-    color: white;
     -webkit-box-shadow: 0 0 0 30px transparent inset !important;
 }
 </style>
