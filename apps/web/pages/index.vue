@@ -31,7 +31,7 @@ const submit = async () => {
 <template>
     <main
         class="relative flex min-h-screen flex-col items-center justify-between px-4 py-24 bg-gradient-to-t from-transparent from-violet-400/0 to-violet-400/20">
-        <Particles class="absolute inset-0 z-10 " :vy=-1 :quantity=50 :staticity=200 color="#7c3aed" />
+        <Particles class="absolute inset-0 z-10 " :vy=-0.5 :quantity=70 :staticity=50 color="#7c3aed" />
         <div class="flex flex-col items-center my-4 md:my-8 lg:my-16 xl:my-24 z-20">
             <div
                 class="text-center md:text-6xl xl:text-7xl text-5xl text-transparent bg-clip-text bg-gradient-to-t py-2 from-violet-100 to-zinc-600 font-display font-bold">
