@@ -16,6 +16,7 @@ export default defineNuxtConfig({
   },
   css: [
     '@unocss/reset/tailwind.css',
+    './styles/main.css'
   ],
   ssr: true,
   compatibilityDate: '2024-04-03',
