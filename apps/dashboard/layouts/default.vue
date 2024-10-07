@@ -83,7 +83,7 @@ const navigation = ref<NavigationType>({
     ],
     navSections: [
         {
-            title: 'RESOURCES',
+            title: 'Resources',
             navItems: [
                 {
                     title: 'Documentation',

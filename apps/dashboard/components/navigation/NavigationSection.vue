@@ -16,15 +16,15 @@ onMounted(() => {
 </script>
 
 <template>
-  <Collapsible
-    v-model:open="isOpen"
-    class="ml-[-8px]"
-  >
-    <div ref="headerEl" class="mb-[1px] ml-[8px] mt-[8px] flex flex-row cursor-pointer items-center justify-between rounded-md hover:bg-hover">
+  <Collapsible v-model:open="isOpen" class="ml-[-8px]">
+    <div ref="headerEl"
+      class="mb-[1px] ml-[8px] mt-[8px] flex flex-row cursor-pointer items-center justify-between rounded-md hover:bg-hover">
       <CollapsibleTrigger as-child>
         <button class="h-[24px] flex grow-1 items-center self-start rounded-md px-[4px] leading-[4px]">
-          <span class="text-left text-[0.75rem] text-faded">Business</span>
-          <div class="i-material-symbols-light-play-arrow-rounded text-md ml-[2px] mt-[2px] transition-transform duration-[0.15s] will-change-transform text-semifaded" :class="cn(isOpen ? 'rotate-90' : 'rotate-0')" />
+          <span class="text-left text-[0.75rem] text-faded">{{ title }}</span>
+          <div
+            class="i-material-symbols-light-play-arrow-rounded text-md ml-[2px] mt-[2px] transition-transform duration-[0.15s] will-change-transform text-semifaded"
+            :class="cn(isOpen ? 'rotate-90' : 'rotate-0')" />
         </button>
       </CollapsibleTrigger>
     </div>
