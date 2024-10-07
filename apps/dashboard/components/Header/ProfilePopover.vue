@@ -4,7 +4,6 @@ import {
     PopoverContent,
     PopoverTrigger,
 } from '@/components/ui/popover'
-import SelectorButton from './SelectorButton.vue';
 
 const open = ref(false)
 </script>

@@ -7,7 +7,7 @@ import { TooltipProvider } from '@/components/ui/tooltip';
 <template>
     <TooltipProvider>
         <div
-            class="flex bg-faded flex-row gap-[8px] justify-between items-center min-w-0 w-full box-border h-[48px] px-[12px] border border-b-[#E8E9ED]">
+            class="flex bg-faded flex-row gap-[8px] justify-between items-center min-w-0 w-full box-border h-[48px] px-[12px] border border-b-gray-300">
             <!-- The workspace nav -->
             <div class="flex flex-row gap-[8px] justify-start items-center min-w-0 box-border shrink-0 h-full">
                 <TooltipWrapper content="Back to Station Overview" align="start">
