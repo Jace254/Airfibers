@@ -4,6 +4,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@unocss/nuxt',
     'radix-vue/nuxt',
+    '@nuxtjs/color-mode',
     '@nuxt/image',
     'nuxt-og-image'
   ],
@@ -13,6 +14,9 @@ export default defineNuxtConfig({
     payloadExtraction: false,
     renderJsonPayloads: true,
     typedPages: true,
+  },
+  colorMode: {
+    classSuffix: '',
   },
   css: [
     '@unocss/reset/tailwind.css',
