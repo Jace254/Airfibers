@@ -17,6 +17,7 @@
     "@unocss/nuxt": "^0.63.2",
     "@unocss/preset-mini": "0.57.1",
     "@unocss/reset": "^0.63.2",
+    "@vueuse/components": "^11.1.0",
     "@vueuse/core": "^11.1.0",
     "@vueuse/nuxt": "^11.1.0",
     "class-variance-authority": "^0.7.0",

@@ -3,5 +3,5 @@
 </script>
 
 <template>
-    <div>Dashboard</div>
+    <div>Overview</div>
 </template>

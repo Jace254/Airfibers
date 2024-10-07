@@ -53,6 +53,9 @@ importers:
       '@unocss/reset':
         specifier: ^0.63.2
         version: 0.63.2
+      '@vueuse/components':
+        specifier: ^11.1.0
+        version: 11.1.0(vue@3.5.10)
       '@vueuse/core':
         specifier: ^11.1.0
         version: 11.1.0(vue@3.5.10)
@@ -3528,6 +3531,17 @@ packages:
 
   /@vue/shared@3.5.10:
     resolution: {integrity: sha512-VkkBhU97Ki+XJ0xvl4C9YJsIZ2uIlQ7HqPpZOS3m9VCvmROPaChZU6DexdMJqvz9tbgG+4EtFVrSuailUq5KGQ==}
+    dev: false
+
+  /@vueuse/components@11.1.0(vue@3.5.10):
+    resolution: {integrity: sha512-8CTbvH1rHfAlqsMdMg6G2OiIvHiHn8HRx0yyJ+Ri/C8J6cLylXAd7VESawoCAkRdAXT4ucPnj/uYHZqEb0JbBQ==}
+    dependencies:
+      '@vueuse/core': 11.1.0(vue@3.5.10)
+      '@vueuse/shared': 11.1.0(vue@3.5.10)
+      vue-demi: 0.14.10(vue@3.5.10)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
     dev: false
 
   /@vueuse/core@10.11.1(vue@3.5.10):

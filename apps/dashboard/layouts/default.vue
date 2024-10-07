@@ -1,5 +1,117 @@
 <script setup lang="ts">
-import Header from '@/components/Header/Header.vue';
+import Header from '@/components/header/Header.vue';
+import { useEventListener } from '@vueuse/core'
+import type { Navigation as NavigationType } from '@/types'
+
+const navigation = ref<NavigationType>({
+    navItems: [
+        {
+            title: 'Overview',
+            icon: 'i-material-symbols-team-dashboard',
+            to: '/',
+        },
+        {
+            title: 'Analytics',
+            icon: 'i-material-symbols-analytics',
+            to: '/analytics',
+        },
+        {
+            title: 'Customers',
+            icon: 'i-ion-person-circle',
+            subItems: [
+                {
+                    title: "Hotspot users",
+                    to: '/cutomers/hotspot-users'
+                },
+                {
+                    title: "Fixed users",
+                    to: '/cutomers/fixed-users'
+                }
+            ],
+            to: '/customers',
+        },
+        {
+            title: 'Networking',
+            icon: 'i-ion-git-network',
+            subItems: [
+                {
+                    title: "Routers",
+                    to: '/networking/routers'
+                },
+                {
+                    title: "Package Management",
+                    to: '/networking/package-management'
+                }
+            ],
+            to: '/networking',
+        },
+        {
+            title: 'CRM',
+            icon: 'i-fluent-people-community-24-filled',
+            subItems: [
+                {
+                    title: 'Campaigns',
+                    to: '/crm/campaigns'
+                },
+                {
+                    title: 'Workflows',
+                    to: '/crm/workflows'
+                },
+            ],
+            to: '/crm',
+        },
+        {
+            title: 'Finance',
+            icon: 'i-ph-money-wavy-fill',
+            subItems: [
+                {
+                    title: 'Transactions',
+                    to: '/finance/transactions'
+                },
+                {
+                    title: 'Invoices',
+                    to: '/finance/invoices'
+                },
+            ],
+            to: '/finance',
+        },
+        {
+            title: 'Settings',
+            icon: 'i-hugeicons-preference-horizontal',
+            to: '/finance',
+        },
+    ],
+    navSections: [
+        {
+            title: 'RESOURCES',
+            navItems: [
+                {
+                    title: 'Documentation',
+                    icon: 'i-oui-documentation',
+                    to: 'https://docs.airfibers.com',
+                },
+                {
+                    title: 'Feedback',
+                    icon: 'i-ic-twotone-feedback',
+                    to: 'https://feedback.airfibers.com',
+                },
+            ],
+        },
+    ],
+})
+
+const navOpen = ref(false)
+const navButton = ref<HTMLButtonElement>()
+
+function toggleNav() {
+    navOpen.value = !navOpen.value
+}
+
+onMounted(() => {
+    useEventListener(navButton, 'click', (e) => {
+        e.stopPropagation()
+    })
+})
 
 const authed = ref(true)
 
@@ -39,14 +151,29 @@ useHead({
 </script>
 
 <template>
-    <main class="layoutScrollbarObtrusive h-[100vh] w-full bg-accent dark:bg-background font-display font-400 text-sm line-height-none">
+    <main
+        class="layoutScrollbarObtrusive h-[100vh] w-full bg-accent dark:bg-background font-display font-400 text-sm line-height-none">
         <div class="h-full w-full flex flex-row items-stretch text-foreground">
             <div v-if="!authed">
                 Login
             </div>
             <div class="w-full flex flex-col" v-if="authed">
                 <Header />
-                <slot />
+                <div class="h-full w-full flex flex-row items-stretch text-foreground">
+                    <Navigation v-model="navOpen" :nav-items="navigation.navItems"
+                        :nav-sections="navigation.navSections" />
+                    <div class="min-w-[0px] w-full flex flex-col transition-all lg:p-2 lg:ps-0">
+                        <div class="h-full w-full border border-border rounded-sm bg-background dark:bg-accent:40">
+                            <button ref="navButton"
+                                class="hover:bg-hover:80 absolute left-5 top-3 z-100 block rounded active:bg-active p-1 lg:hidden"
+                                @click="toggleNav">
+                                <div
+                                    :class="cn(navOpen ? 'i-fluent-panel-left-48-filled' : 'i-fluent-panel-left-48-regular')" />
+                            </button>
+                            <slot />
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
