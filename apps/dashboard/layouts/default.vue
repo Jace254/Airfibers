@@ -2,6 +2,8 @@
 import Header from '@/components/header/Header.vue';
 import { useEventListener } from '@vueuse/core'
 import type { Navigation as NavigationType } from '@/types'
+import { TooltipProvider } from '@/components/ui/tooltip';
+
 
 const navigation = ref<NavigationType>({
     navItems: [
@@ -151,30 +153,27 @@ useHead({
 </script>
 
 <template>
-    <main
-        class="layoutScrollbarObtrusive h-[100vh] w-full bg-accent dark:bg-background font-display font-400 text-sm line-height-none">
-        <div class="h-full w-full flex flex-row items-stretch text-foreground">
-            <div v-if="!authed">
-                Login
-            </div>
-            <div class="w-full flex flex-col" v-if="authed">
-                <Header />
-                <div class="h-full w-full flex flex-row items-stretch text-foreground">
-                    <Navigation v-model="navOpen" :nav-items="navigation.navItems"
-                        :nav-sections="navigation.navSections" />
-                    <div class="min-w-[0px] w-full flex flex-col transition-all lg:p-2 lg:ps-0">
-                        <div class="h-full w-full border border-border rounded-sm bg-background dark:bg-accent:40">
-                            <button ref="navButton"
-                                class="hover:bg-hover:80 absolute left-5 top-3 z-100 block rounded active:bg-active p-1 lg:hidden"
-                                @click="toggleNav">
-                                <div
-                                    :class="cn(navOpen ? 'i-fluent-panel-left-48-filled' : 'i-fluent-panel-left-48-regular')" />
-                            </button>
-                            <slot />
+    <TooltipProvider>
+        <main
+            class="layoutScrollbarObtrusive h-[100vh] w-full bg-accent dark:bg-background font-display font-400 text-sm line-height-none">
+            <div class="h-full w-full flex flex-row items-stretch text-foreground">
+                <div v-if="!authed">
+                    Login
+                </div>
+                <div class="w-full flex flex-col" v-if="authed">
+                    <Header />
+                    <div class="h-full w-full flex flex-row items-stretch text-foreground">
+                        <Navigation v-model="navOpen" :nav-items="navigation.navItems"
+                            :nav-sections="navigation.navSections" />
+                        <div class="min-w-[0px] w-full flex flex-col transition-all lg:p-2 lg:ps-0">
+                            <div
+                                class="h-full w-full border border-border lg:rounded-sm bg-background dark:bg-accent:40">
+                                <slot />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
+        </main>
+    </TooltipProvider>
 </template>
