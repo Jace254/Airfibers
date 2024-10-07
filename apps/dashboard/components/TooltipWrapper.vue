@@ -1,16 +1,20 @@
 <script setup lang="ts">
 import { Tooltip, TooltipTrigger, TooltipContent } from '@/components/ui/tooltip';
 
-defineProps<{ content: string, align: 'start' | 'center' | 'end' }>()
+defineProps<{
+    content: string,
+    align: 'start' | 'center' | 'end',
+    side?: "top" | "right" | "bottom" | "left" | undefined
+}>()
 </script>
 
 <template>
     <Tooltip>
-        <TooltipTrigger>
+        <TooltipTrigger as-child>
             <slot />
         </TooltipTrigger>
         <TooltipContent class="bg-gray-800 text-white py-1 px-1 rounded-md font-sans text-xs my-[10px]" :align="align"
-            :side-offset="0">
+            :side="side" :side-offset="3">
             <p>{{ content }}</p>
         </TooltipContent>
     </Tooltip>
