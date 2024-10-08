@@ -54,7 +54,7 @@ const submit = async () => {
                 Email address
             </label>
             <input v-model='email' type="email" autocomplete="email" name="email" id="email" placeholder="Email address"
-                class="peer w-0 flex-auto bg-transparent px-2 py-2.5 text-base  text-white placeholder:text-semifaded focus:outline-none focus:ring-0" />
+                class="peer w-0 flex-auto bg-transparent px-2 py-2.5 text-base  text-white placeholder:text-gray-300 focus:outline-none focus:ring-0" />
             <button
                 class="hidden  sm:block group relative isolate flex-none rounded-md py-1.5 text-[0.8125rem]/6 font-semibold text-white pl-2.5 pr-[calc(9/16*1rem)] bg-indigo-300/20"
                 @click="submit">

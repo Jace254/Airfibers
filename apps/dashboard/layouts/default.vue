@@ -102,19 +102,18 @@ const navigation = ref<NavigationType>({
 })
 
 const navOpen = ref(false)
-const navButton = ref<HTMLButtonElement>()
+const dynamicMain = ref<HTMLElement>()
 
-function toggleNav() {
-    navOpen.value = !navOpen.value
+function setDynamicHeight() {
+    if (dynamicMain.value)
+        dynamicMain.value.style.height = `${window.innerHeight}px`
 }
 
 onMounted(() => {
-    useEventListener(navButton, 'click', (e) => {
-        e.stopPropagation()
-    })
+    // setDynamicHeight()
+    // useEventListener('resize', setDynamicHeight)
 })
 
-const authed = ref(true)
 
 useHead({
     htmlAttrs: {
@@ -153,13 +152,10 @@ useHead({
 
 <template>
     <TooltipProvider>
-        <main
-            class="layoutScrollbarObtrusive h-[100vh] w-full bg-accent dark:bg-background font-display font-400 text-sm line-height-none">
+        <main ref="dynamicMain"
+            class="layoutScrollbarObtrusive  w-full h-[100vh] bg-accent dark:bg-background font-display font-400 text-sm line-height-none">
             <div class="h-full w-full flex flex-row items-stretch text-foreground">
-                <div v-if="!authed">
-                    Login
-                </div>
-                <div class="w-full flex flex-col" v-if="authed">
+                <div class="w-full flex flex-col">
                     <Header />
                     <div class="h-full w-full flex flex-row items-stretch text-foreground">
                         <Navigation v-model="navOpen" :nav-items="navigation.navItems"
@@ -176,3 +172,20 @@ useHead({
         </main>
     </TooltipProvider>
 </template>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+}
+
+html {
+    height: -webkit-fill-available;
+}
+
+#dynamicMain {
+    min-height: -webkit-fill-available;
+}
+</style>
