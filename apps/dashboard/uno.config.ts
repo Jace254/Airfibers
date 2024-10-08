@@ -15,7 +15,7 @@ export default defineConfig({
     'border-active': 'border-gray-800',
     'bg-inverted': 'bg-gray-800 dark:bg-gray-200',
     'bg-active': 'bg-gray:10',
-    'bg-washed': 'bg-gray:2 dark:bg-gray-600',
+    'bg-washed': 'bg-gray:2 dark:bg-gray-900:10',
     'bg-semifaded': 'bg-gray-100 dark:bg-gray-700',
     'bg-hover': 'dark:bg-accent:80 bg-gray:30',
     'bg-base': 'bg-background',
