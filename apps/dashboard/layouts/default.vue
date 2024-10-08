@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import Header from '../components/header/Header.vue';
 import { useEventListener } from '@vueuse/core'
 import type { Navigation as NavigationType } from '@/types'
 import { TooltipProvider } from '@/components/ui/tooltip';
