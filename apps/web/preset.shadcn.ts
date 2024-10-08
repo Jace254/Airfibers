@@ -2,7 +2,7 @@ import { h } from '@unocss/preset-mini/utils'
 import type { Preset } from 'unocss'
 import type { PresetMiniOptions, Theme } from 'unocss/preset-mini'
 
-export interface PresetShadcnOptions extends PresetMiniOptions {}
+export interface PresetShadcnOptions extends PresetMiniOptions { }
 
 function handleMatchNumber(v: string, defaultVal = '0') {
   return h.bracket.cssvar.global.auto.fraction.number(v || defaultVal)?.replace('%', '')
@@ -63,7 +63,7 @@ export function presetShadcn(_options: PresetShadcnOptions = {}): Preset<Theme> 
             --popover:222.2 84% 4.9%;
             --popover-foreground:210 40% 98%;
           
-            --primary:217.2 91.2% 59.8%;
+            --primary:210 40% 98%;
             --primary-foreground:222.2 47.4% 11.2%;
           
             --secondary:217.2 32.6% 17.5%;
@@ -80,7 +80,7 @@ export function presetShadcn(_options: PresetShadcnOptions = {}): Preset<Theme> 
           
             --border:217.2 32.6% 17.5%;
             --input:217.2 32.6% 17.5%;
-            --ring:224.3 76.3% 48%;
+            --ring:212.7 26.8% 83.9;
           }
         `,
       },
