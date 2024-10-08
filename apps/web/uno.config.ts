@@ -18,6 +18,7 @@ export default defineConfig({
     'bg-base': 'bg-background',
     'text-faded': 'text-gray-800:70 dark:text-gray-200:70',
     'text-semifaded': 'text-gray-900:80 dark:text-gray-300:80',
+    'text-light': 'text-gray-300 dark:text-gray-600',
     'rounded-md': 'rounded-[4px]',
     'rounded-sm': 'rounded-[2px]',
     'animate-accordion-up': 'accordion-up',

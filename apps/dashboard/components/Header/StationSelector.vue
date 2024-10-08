@@ -33,7 +33,7 @@ const toggleSearch = () => {
                     </div>
                 </SelectorButton>
             </PopoverTrigger>
-            <PopoverContent class="w-[250px] p-0 border border-gray-300 rounded-xl overflow-hidden" align="start">
+            <PopoverContent class="w-[250px] p-0 border border-border rounded-xl overflow-hidden" align="start">
                 <div class=" w-full h-auto  bg-accent text-sm">
                     <div px-4 py-2 bg-background w-full flex justify-between text-faded>
                         <span>STATIONS(1)</span>
@@ -48,8 +48,8 @@ const toggleSearch = () => {
                             class="focus-visible:ring-none h-[30px]" />
                     </div>
                     <div
-                        class="h-[40px] w-full flex items-center justify-between px-4 bg-background border-b rounded-b-xl shadow-sm border-gray-300">
-                        <div class="flex items-center gap-1 text-gray-800">
+                        class="h-[40px] w-full flex items-center justify-between px-4 bg-background border-b rounded-b-xl shadow-sm border-border">
+                        <div class="flex items-center gap-1 text-faded">
                             <div i-gis-globe-poi />
                             <span>Utawala</span>
                         </div>

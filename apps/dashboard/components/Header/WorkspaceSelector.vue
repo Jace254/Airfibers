@@ -17,10 +17,10 @@ const open = ref(false)
                     Joashnet
                 </SelectorButton>
             </PopoverTrigger>
-            <PopoverContent class="w-[250px] p-0 border border-gray-300 rounded-xl overflow-hidden" align="start">
+            <PopoverContent class="w-[250px] p-0 border border-border rounded-xl overflow-hidden" align="start">
                 <div class=" w-full h-auto  bg-accent text-sm">
                     <div
-                        class="w-full flex flex-col items-center overflow-hidden bg-background border-b rounded-xl shadow-sm border-gray-300">
+                        class="w-full flex flex-col items-center overflow-hidden bg-background border-b rounded-xl shadow-sm border-border">
                         <div
                             class="h-[40px] w-full px-4 flex items-center justify-between border-b border-dashed border-border">
                             <span>Joashnet</span>

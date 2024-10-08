@@ -37,7 +37,7 @@ const submit = async () => {
                 class="text-center md:text-6xl xl:text-7xl text-5xl text-transparent bg-clip-text bg-gradient-to-t py-2 from-violet-100 to-zinc-600 font-display font-bold">
                 Revolutionize your WISP Business
             </div>
-            <p class="text-center font-thin font-sans text-sm xl:text-lg text-gray-300 mt-8 max-w-2xl">
+            <p class="text-center font-thin font-sans text-sm xl:text-lg text-light mt-8 max-w-2xl">
                 Airfibers is a cutting-edge WISP Business Management platform.
                 <br>Grow your customer base with ease and get
                 realtime business analytics and insights.
@@ -54,7 +54,7 @@ const submit = async () => {
                 Email address
             </label>
             <input v-model='email' type="email" autocomplete="email" name="email" id="email" placeholder="Email address"
-                class="peer w-0 flex-auto bg-transparent px-2 py-2.5 text-base  text-white placeholder:text-gray-500 focus:outline-none focus:ring-0" />
+                class="peer w-0 flex-auto bg-transparent px-2 py-2.5 text-base  text-white placeholder:text-semifaded focus:outline-none focus:ring-0" />
             <button
                 class="hidden  sm:block group relative isolate flex-none rounded-md py-1.5 text-[0.8125rem]/6 font-semibold text-white pl-2.5 pr-[calc(9/16*1rem)] bg-indigo-300/20"
                 @click="submit">

@@ -13,7 +13,7 @@ defineProps<{
         <TooltipTrigger as-child>
             <slot />
         </TooltipTrigger>
-        <TooltipContent class="bg-gray-800 text-white py-1 px-1 rounded-md font-sans text-xs my-[10px]" :align="align"
+        <TooltipContent class="bg-inverted text-white py-1 px-1 rounded-md font-sans text-xs my-[10px]" :align="align"
             :side="side" :side-offset="3">
             <p>{{ content }}</p>
         </TooltipContent>
