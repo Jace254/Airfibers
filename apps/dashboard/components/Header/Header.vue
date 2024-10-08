@@ -5,7 +5,7 @@ import Logo from '@/components/Logo.vue';
 
 <template>
     <div
-        class="flex bg-faded flex-row gap-[8px] justify-between items-center min-w-0 w-full box-border h-[48px] px-[12px] border-b border-border">
+        class="flex bg-washed flex-row gap-[8px] justify-between items-center min-w-0 w-full box-border h-[48px] px-[12px] border-b border-border">
         <!-- The workspace nav -->
         <div class="flex flex-row gap-[8px] justify-start items-center min-w-0 box-border shrink-0 h-full">
             <TooltipWrapper content="Back to Station Overview" align="start">
