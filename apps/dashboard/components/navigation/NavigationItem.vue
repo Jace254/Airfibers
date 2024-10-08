@@ -27,7 +27,7 @@ function navClicked() {
             </span>
           </NuxtLink>
         </TooltipTrigger>
-        <TooltipContent class="bg-faded text-white py-1 px-1 rounded-md font-sans text-xs my-[10px] lg:hidden"
+        <TooltipContent class="bg-faded text-background py-1 px-1 rounded-md font-sans text-xs my-[10px] lg:hidden"
           align="center" side="right" :side-offset="3">
           <p>{{ title }}</p>
         </TooltipContent>

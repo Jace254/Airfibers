@@ -16,7 +16,7 @@ export default defineConfig({
     'bg-inverted': 'bg-gray-800 dark:bg-gray-200',
     'bg-active': 'bg-gray:10',
     'bg-faded': 'bg-gray:2',
-    'bg-semifaded': 'bg-gray-100 dark:border-gray-700',
+    'bg-semifaded': 'bg-gray-100 dark:bg-gray-700',
     'bg-hover': 'dark:bg-accent:80 bg-gray:30',
     'bg-base': 'bg-background',
     'text-faded': 'text-gray-800:70 dark:text-gray-200:70',
