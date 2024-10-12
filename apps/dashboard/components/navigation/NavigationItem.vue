@@ -32,9 +32,6 @@ function navClicked() {
           <p>{{ title }}</p>
         </TooltipContent>
       </Tooltip>
-      <TooltipWrapper :content="title" align="center" side="right">
-
-      </TooltipWrapper>
     </div>
   </div>
   <template v-if="subItems">
