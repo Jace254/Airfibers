@@ -1,6 +1,7 @@
 import { useSession } from "@/composables/useAuth"
 
 export default defineNuxtRouteMiddleware((to, from) => {
+    if (import.meta.server) return
     try {
         const session = useSession()
 
