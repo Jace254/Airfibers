@@ -1,3 +1,12 @@
+<script setup lang="ts">
+definePageMeta({
+    layout: 'auth'
+})
+</script>
+
+
 <template>
-    <div>sign in</div>
+    <main class="flex-1 relative content-center grid">
+        <AuthSignIn />
+    </main>
 </template>

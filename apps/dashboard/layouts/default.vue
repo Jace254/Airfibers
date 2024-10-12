@@ -152,7 +152,7 @@ useHead({
 <template>
     <TooltipProvider>
         <main ref="dynamicMain"
-            class="layoutScrollbarObtrusive  w-full h-[100vh] bg-accent dark:bg-background font-display font-400 text-sm line-height-none">
+            class="layoutScrollbarObtrusive  w-full min-h-screen bg-accent dark:bg-background font-display font-400 text-sm line-height-none">
             <div class="h-full w-full flex flex-row items-stretch text-foreground">
                 <div class="w-full flex flex-col">
                     <Header />
