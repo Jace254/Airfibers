@@ -5,7 +5,18 @@ import {
     PopoverTrigger,
 } from '@/components/ui/popover'
 
+const { signOut } = useAuthClient()
 const open = ref(false)
+const signOutUser = async () => {
+    await signOut({
+        fetchOptions: {
+            body: {
+                callbackURL: "/auth/sign-in",
+            },
+        },
+    })
+}
+
 </script>
 
 <template>
@@ -36,7 +47,7 @@ const open = ref(false)
                                 <span>Manage account</span>
                             </div>
                         </button>
-                        <button
+                        <button @click="signOutUser"
                             class="w-full text-xs border border-border rounded-lg p-1 shadow hover:bg-active hover:text-foreground">
                             <div flex items-center justify-center gap="2px">
                                 <div i-material-symbols-logout-rounded />

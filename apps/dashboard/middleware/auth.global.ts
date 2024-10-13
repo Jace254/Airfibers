@@ -1,18 +1,14 @@
-import { useSession } from "@/composables/useAuth"
-
-export default defineNuxtRouteMiddleware((to, from) => {
+export default defineNuxtRouteMiddleware(async (to, from) => {
     if (import.meta.server) return
-    try {
-        const session = useSession()
+    const { session: getSession } = useAuthClient()
+    const session = await getSession()
 
-        if (session.value.error && !to.fullPath.includes("/auth")) {
-            return navigateTo('/auth/sign-in')
-        }
-
-        if (session.value.data && to.fullPath.includes("/auth")) {
-            return navigateTo('/')
-        }
-    } catch (e) {
+    console.log(session.data)
+    if (session.error && !to.fullPath.includes("/auth")) {
         return navigateTo('/auth/sign-in')
+    }
+
+    if (session.data && to.fullPath.includes("/auth")) {
+        return navigateTo('/')
     }
 })                                                                         
