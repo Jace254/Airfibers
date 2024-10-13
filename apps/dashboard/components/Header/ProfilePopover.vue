@@ -5,7 +5,7 @@ import {
     PopoverTrigger,
 } from '@/components/ui/popover'
 
-const { signOut } = useAuthClient()
+const { signOut, useSession } = useAuthClient()
 const open = ref(false)
 const signOutUser = async () => {
     await signOut({
@@ -17,6 +17,8 @@ const signOutUser = async () => {
     })
 }
 
+const session = useSession()
+
 </script>
 
 <template>
@@ -24,18 +26,18 @@ const signOutUser = async () => {
         <Popover v-model:open="open">
             <PopoverTrigger as-child>
                 <button class="bg-inverted w-[24px] h-[24px] rounded-full overflow-hidden border border-border">
-                    <NuxtImg src="/profile-demo.jpg" />
+                    <NuxtImg :src="session.data?.user.image" />
                 </button>
             </PopoverTrigger>
             <PopoverContent class="w-[350px] p-0 border border-border rounded-xl  overflow-hidden" align="end">
                 <div class=" w-full h-auto flex flex-col bg-background text-sm">
                     <div class="w-full h-auto flex flex-row items-center p-4 gap-[8px]">
                         <div class="bg-inverted w-[36px] h-[36px] rounded-full overflow-hidden border border-border">
-                            <NuxtImg src="/profile-demo.jpg" />
+                            <NuxtImg :src="session.data?.user.image" />
                         </div>
                         <div class="flex flex-col justify-center items-start ">
-                            <span class="font-semibold">Joash Agesa</span>
-                            <span>Joash</span>
+                            <span class="font-semibold ">{{ session.data?.user.name }}</span>
+                            <span text-faded>{{ session.data?.user.email }}</span>
                         </div>
                     </div>
                     <div
