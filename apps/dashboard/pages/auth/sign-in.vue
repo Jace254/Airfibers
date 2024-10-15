@@ -1,4 +1,7 @@
 <script setup lang="ts">
+useHead({
+    title: "Sign in"
+})
 definePageMeta({
     layout: 'auth'
 })
