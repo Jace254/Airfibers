@@ -15,6 +15,11 @@ export default defineNuxtConfig({
     renderJsonPayloads: true,
     typedPages: true,
   },
+  runtimeConfig: {
+    public: {
+      gatewayBaseUrl: ''
+    }
+  },
   css: [
     '@unocss/reset/tailwind.css',
     './styles/main.css'
