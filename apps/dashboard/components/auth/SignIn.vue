@@ -23,7 +23,7 @@ const googleSignIn = async () => {
 
 <template>
     <AuthCard action-description="Don't have an account?" action-text="Sign up" action-url="/auth/sign-up"
-        header-title="Sign in to Airfibers" header-sub-title="Welcome back! Please sign in to continue.">
+        header-title="Sign in to AIRFibers" header-sub-title="Welcome back! Please sign in to continue.">
         <div id="ath-main" class="box-border flex flex-col items-stretch justify-start gap-[1.5rem]">
             <div class="box-border flex flex-col items-stretch justify-start gap-[.5rem]">
                 <div id="ath-socialButtons"

@@ -3,7 +3,7 @@ useHead({
   htmlAttrs: {
     lang: 'en'
   },
-  title: 'Airfibers',
+  title: 'AIRFibers',
   meta: [
     { name: 'description', content: 'Accelerate your WISP business' },
     { property: 'og:title', content: 'Cutting-edge WISP Business Management' },
