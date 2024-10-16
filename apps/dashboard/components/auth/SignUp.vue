@@ -52,9 +52,9 @@ const googleSignUp = async () => {
                                     </label>
                                 </div>
                                 <input v-model='firstName' type="text" autocomplete="firstName" name="firstName"
-                                    id="firstName" box-border m-0 py-0.375rem px-0.75rem bg-background text-foreground
-                                    shadow-sm outline max-h-2.25rem w-full accent-primary font-400 rounded=".375rem"
-                                    border border-foreground:15 transition-all ease duration-200
+                                    required id="firstName" box-border m-0 py-0.375rem px-0.75rem bg-background
+                                    text-foreground shadow-sm outline max-h-2.25rem w-full accent-primary font-400
+                                    rounded=".375rem" border border-foreground:15 transition-all ease duration-200
                                     focus:outline-primary:20 focus:ring-0 outline-none focus:outline-2.5px
                                     focus:outline-offset-0 hover:border-foreground:30 />
                             </div>
@@ -68,7 +68,7 @@ const googleSignUp = async () => {
                                         Last name
                                     </label>
                                 </div>
-                                <input v-model='lastName' type="text" autocomplete="lastName" name="lastName"
+                                <input v-model='lastName' type="text" autocomplete="lastName" name="lastName" required
                                     id="lastName" box-border m-0 py-0.375rem px-0.75rem bg-background text-foreground
                                     shadow-sm outline max-h-2.25rem w-full accent-primary font-400 rounded=".375rem"
                                     border border-foreground:15 transition-all ease duration-200
@@ -88,11 +88,11 @@ const googleSignUp = async () => {
                                     </label>
                                 </div>
                                 <input v-model='email' type="email" autocomplete="email" name="email" id="email"
-                                    box-border m-0 py-0.375rem px-0.75rem bg-background text-foreground shadow-sm
-                                    outline max-h-2.25rem w-full accent-primary font-400 rounded=".375rem" border
-                                    border-foreground:15 transition-all ease duration-200 focus:outline-primary:20
-                                    focus:ring-0 outline-none focus:outline-2.5px focus:outline-offset-0
-                                    hover:border-foreground:30 />
+                                    required box-border m-0 py-0.375rem px-0.75rem bg-background text-foreground
+                                    shadow-sm outline max-h-2.25rem w-full accent-primary font-400 rounded=".375rem"
+                                    border border-foreground:15 transition-all ease duration-200
+                                    focus:outline-primary:20 focus:ring-0 outline-none focus:outline-2.5px
+                                    focus:outline-offset-0 hover:border-foreground:30 />
                             </div>
                         </div>
                     </div>
@@ -106,11 +106,12 @@ const googleSignUp = async () => {
                                         Password
                                     </label>
                                 </div>
-                                <input v-model='password' type="password" name="password" id="password" box-border m-0
-                                    py-0.375rem px-0.75rem bg-background text-foreground shadow-sm outline max-h-2.25rem
-                                    w-full accent-primary font-400 rounded=".375rem" border border-foreground:15
-                                    transition-all ease duration-200 focus:outline-primary:20 focus:ring-0 outline-none
-                                    focus:outline-2.5px focus:outline-offset-0 hover:border-foreground:30 />
+                                <input v-model='password' type="password" name="password" id="password" required
+                                    box-border m-0 py-0.375rem px-0.75rem bg-background text-foreground shadow-sm
+                                    outline max-h-2.25rem w-full accent-primary font-400 rounded=".375rem" border
+                                    border-foreground:15 transition-all ease duration-200 focus:outline-primary:20
+                                    focus:ring-0 outline-none focus:outline-2.5px focus:outline-offset-0
+                                    hover:border-foreground:30 />
                             </div>
                         </div>
                     </div>
