@@ -40,7 +40,7 @@ const navigation = ref<NavigationType>({
                 },
                 {
                     title: "Package Management",
-                    to: '/networking/package-management'
+                    to: '/networking/package-management/bandwidth'
                 }
             ],
             to: '/networking',
@@ -78,7 +78,7 @@ const navigation = ref<NavigationType>({
         {
             title: 'Settings',
             icon: 'i-hugeicons-preference-horizontal',
-            to: '/finance',
+            to: '/settings',
         },
     ],
     navSections: [
@@ -161,8 +161,10 @@ useHead({
                             :nav-sections="navigation.navSections" />
                         <div class="min-w-[0px] w-full flex flex-col transition-all lg:p-2 lg:ps-0">
                             <div
-                                class="h-full w-full border border-border lg:rounded-sm bg-background dark:bg-accent:40">
-                                <slot />
+                                class="h-full w-full border border-border lg:rounded-md bg-background dark:bg-accent:40">
+                                <div w-full mx-auto max-w-[1152px] p-4 lg:p-8>
+                                    <slot />
+                                </div>
                             </div>
                         </div>
                     </div>
