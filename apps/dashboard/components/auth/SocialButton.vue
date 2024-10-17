@@ -4,6 +4,7 @@ import { cn } from '@/utils';
 interface Props {
     icon: string
     label: string
+    loading: boolean
     onClick: () => void
 }
 
@@ -16,7 +17,7 @@ defineProps<Props>()
         line-height="1.38462" border border-border w-full gap="1rem" relative justify-start hover:bg-accent
         @click="onClick">
         <span box-border flex items-center justify-center gap=".75rem" w-full overflow-hidden>
-            <div :class="cn(icon, 'text-lg')" />
+            <div :class="cn(loading ? 'i-eos-icons-loading' : icon, 'text-lg')" />
             <span text-sm font-500>{{ label }}</span>
         </span>
     </button>
