@@ -27,21 +27,19 @@ onMounted(() => {
 
 <template>
   <div>
-    <div class="w-44px transition-all lg:w-[330px]" />
-    <div ref="navigation" class="lg:fixed relative max-lg:h-full lg:bottom-0 lg:top-[48px] z-10 w-44px transition-all lg:left-0 lg:w-[330px]">
+    <div class="w-0 transition-all lg:w-[330px]" />
+    <div ref="navigation" class="fixed bottom-0 z-10 w-0 transition-all top-[48px] lg:left-0 lg:w-[330px]"
+      :class="cn(model ? 'left-0' : 'left-[-330px]')">
       <nav v-element-size="onResize"
-        class="relative h-full max-w-[min(-40px_+_100vw,330px)] flex flex-col duration-[0.05s] delay-[0s] ease-[ease-in-out] max-lg:min-w-[40px] max-lg:border max-lg:border-border max-lg:bg-background:70 lg:transition-opacity max-lg:transition-box-shadow"
+        class="relative h-full max-w-[min(-40px_+_100vw,330px)] flex flex-col duration-[0.05s] delay-[0s] ease-[ease-in-out] max-lg:min-w-[220px] max-lg:border max-lg:border-border max-lg:bg-background lg:transition-opacity max-lg:transition-box-shadow"
         :class="cn(model ? 'max-lg:shadow-xl' : 'max-lg:shadow-none')">
-        <div
-          class="mb-[2px] mt-[4px] grow lg:overflow-y-auto max-lg:flex max-lg:flex-col max-lg:justify-between rounded-md py-0 px-[4px] lg:pl-[14px] lg:pr-[4px]"
+        <div class="mb-[2px] mt-[4px] grow overflow-y-auto rounded-md py-0 pl-[14px] pr-[4px]"
           style="scrollbar-gutter: stable;-webkit-box-flex: 1;">
           <template v-if="navItems">
-            <div>
-              <template v-for="navItem, idx in navItems" :key="idx">
-                <NavigationItem :icon="navItem.icon" :title="navItem.title" :sub-items="navItem.subItems"
-                  :to="navItem.to" />
-              </template>
-            </div>
+            <template v-for="navItem, idx in navItems" :key="idx">
+              <NavigationItem :icon="navItem.icon" :title="navItem.title" :sub-items="navItem.subItems"
+                :to="navItem.to" />
+            </template>
           </template>
           <div class="h-[8px] shrink-0" />
           <template v-if="navSections">
