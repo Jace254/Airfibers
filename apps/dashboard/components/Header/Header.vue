@@ -5,12 +5,12 @@ import Logo from '@/components/Logo.vue';
 
 <template>
     <div
-        class="flex bg-washed flex-row gap-[8px] justify-between items-center min-w-0 w-full box-border h-[48px] px-[12px] border-b border-border">
+        class="flex bg-washed flex-row gap-[8px] justify-between items-center min-w-0 w-full box-border max-h-[48px] h-full px-[12px] border-b border-border">
         <!-- The workspace nav -->
         <div class="flex flex-row gap-[8px] justify-start items-center min-w-0 box-border shrink-0 h-full">
             <TooltipWrapper content="Back to Station Overview" align="start">
                 <!-- TODO: Add the overview station link -->
-                <NuxtLink class="w-[30px] h-[30px] flex items-center justify-center">
+                <NuxtLink to="/" class="w-[30px] h-[30px] flex items-center justify-center cursor-pointer">
                     <span class="overflow-hidden">
                         <Logo :width="24" :height="24" />
                     </span>
