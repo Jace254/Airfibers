@@ -36,7 +36,7 @@ export default defineConfig({
     presetIcons(),
     presetAttributify(),
     presetWebFonts({
-      provider: 'bunny',
+      provider: 'google',
       fonts: {
         sans: 'Inter',
       },

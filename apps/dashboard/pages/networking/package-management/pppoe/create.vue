@@ -1,5 +1,3 @@
 <template>
-    <div>
-        Create PPPOE
-    </div>
+    <UxPageHeading text="Create PPPOE" />
 </template>

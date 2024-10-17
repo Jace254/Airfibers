@@ -1,5 +1,3 @@
 <template>
-    <div>
-        Create Hotspot
-    </div>
+    <UxPageHeading text="Create Hotspot"/>
 </template>
