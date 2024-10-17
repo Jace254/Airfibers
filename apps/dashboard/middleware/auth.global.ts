@@ -3,7 +3,6 @@ export default defineNuxtRouteMiddleware(async (to, from) => {
     const { session: getSession } = useAuthClient()
     const session = await getSession()
 
-    console.log(session.data)
     if (session.error && !to.fullPath.includes("/auth")) {
         return navigateTo('/auth/sign-in')
     }
