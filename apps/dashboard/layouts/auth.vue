@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { Toaster } from '@/components/ui/sonner';
+
+
 const links = [
     {
         name: "Support",
@@ -53,7 +56,7 @@ useHead({
 
 
 <template>
-    <div class="flex flex-col h-screen w-full overflow-auto">
+    <main class="flex flex-col h-screen w-full overflow-auto">
         <div class="flex-grow flex">
             <div max-xl:hidden relative bg="#040C22" min-h-screen h-full w-500px flex items-center justify-center>
                 <svg width="600" height="713" viewBox="0 0 600 713" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -116,5 +119,6 @@ useHead({
                 </div>
             </div>
         </div>
-    </div>
+        <Toaster/>
+    </main>
 </template>

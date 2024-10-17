@@ -35,13 +35,13 @@ const navigation = ref<NavigationType>({
             icon: 'i-ion-git-network',
             subItems: [
                 {
+                    title: "Package Management",
+                    to: '/networking/package-management/bandwidth'
+                },
+                {
                     title: "Routers",
                     to: '/networking/routers'
                 },
-                {
-                    title: "Package Management",
-                    to: '/networking/package-management/bandwidth'
-                }
             ],
             to: '/networking',
         },
@@ -101,16 +101,16 @@ const navigation = ref<NavigationType>({
 })
 
 const navOpen = ref(false)
-const dynamicMain = ref<HTMLElement>()
+const navButton = ref<HTMLButtonElement>()
 
-function setDynamicHeight() {
-    if (dynamicMain.value)
-        dynamicMain.value.style.height = `${window.innerHeight}px`
+function toggleNav() {
+    navOpen.value = !navOpen.value
 }
 
 onMounted(() => {
-    // setDynamicHeight()
-    // useEventListener('resize', setDynamicHeight)
+    useEventListener(navButton, 'click', (e) => {
+        e.stopPropagation()
+    })
 })
 
 
@@ -163,6 +163,9 @@ useHead({
                             <div
                                 class="h-full w-full border border-border lg:rounded-md bg-background dark:bg-accent:40">
                                 <div w-full mx-auto max-w-[1152px] p-4 lg:p-8>
+                                    <button ref="navButton" class="block my-3 lg:hidden" @click="toggleNav">
+                                        <div i-fluent-navigation-16-regular text-xl />
+                                    </button>
                                     <slot />
                                 </div>
                             </div>
