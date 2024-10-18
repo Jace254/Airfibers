@@ -20,6 +20,9 @@ export default defineNuxtConfig({
       gatewayBaseUrl: ''
     }
   },
+  app: {
+    layoutTransition: {  name: 'layout', mode: 'out-in' }
+  },
   css: [
     '@unocss/reset/tailwind.css',
     './styles/main.css'
