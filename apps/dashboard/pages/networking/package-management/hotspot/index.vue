@@ -7,8 +7,8 @@ definePageMeta({
 <template>
     <div relative flex items-center justify-between>
         <div flex items-center gap-3>
-            <div min-w-280px>
-                <UxInput placeholder="Search hotspots" type="search" class="pl-2rem" />
+            <div max-w-280px w-full>
+                <UxInput placeholder="Search hotspots" type="search" class="max-sm:text-xs pl-2rem" />
                 <span class="absolute start-0 inset-y-0 flex items-center justify-center px-2">
                     <div class="i-ic-baseline-search text-lg text-muted-foreground" />
                 </span>
