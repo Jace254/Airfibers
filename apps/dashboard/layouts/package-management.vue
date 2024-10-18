@@ -8,11 +8,15 @@ const tabs = ref<NavItem[]>([
         to: "/networking/package-management/bandwidth"
     },
     {
-        title: "Hotspot",
+        title: "IP Pool",
+        to: "/networking/package-management/ip-pool"
+    },
+    {
+        title: "Hotspot Plans",
         to: "/networking/package-management/hotspot"
     },
     {
-        title: "PPPOE",
+        title: "PPPOE Plans",
         to: "/networking/package-management/pppoe"
     }
 ])

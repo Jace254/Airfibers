@@ -1,3 +1,3 @@
 <template>
-    <UxPageHeading heading="Routers" sub-heading="View and manage routers"/>
+    <UxPageHeading heading="Routers" sub-heading="View and manage your routers"/>
 </template>

@@ -1,3 +1,3 @@
 <template>
-    <UxPageHeading heading="Create new hotspot"/>
+    <UxPageHeading heading="Create new hotspot plan"/>
 </template>

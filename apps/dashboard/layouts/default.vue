@@ -21,11 +21,11 @@ const navigation = ref<NavigationType>({
             subItems: [
                 {
                     title: "Hotspot users",
-                    to: '/cutomers/hotspot-users'
+                    to: '/customers/hotspot-users'
                 },
                 {
                     title: "Fixed users",
-                    to: '/cutomers/fixed-users'
+                    to: '/customers/fixed-users'
                 }
             ],
             to: '/customers',

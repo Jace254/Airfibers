@@ -1,3 +1,3 @@
 <template>
-    <UxPageHeading heading="Create new PPPOE" />
+    <UxPageHeading heading="Create new PPPOE plan" />
 </template>

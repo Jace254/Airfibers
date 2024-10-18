@@ -1,3 +1,3 @@
 <template>
-    <div>Networking</div>
+    <UxPageHeading heading="Networking" />
 </template>

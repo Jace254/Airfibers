@@ -4,6 +4,6 @@
         <span text-foreground max-sm:text-xs>
             <slot />
         </span>
-        <div i-tabler-selector />
+        <div i-tabler-selector text-gray-400/>
     </button>
 </template>
