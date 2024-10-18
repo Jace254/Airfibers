@@ -150,31 +150,33 @@ useHead({
 </script>
 
 <template>
-    <TooltipProvider>
-        <main ref="dynamicMain"
-            class="layoutScrollbarObtrusive  w-full h-screen min-h-screen bg-accent dark:bg-background font-display font-400 text-sm line-height-none">
-            <div class="h-full w-full flex flex-row items-stretch text-foreground">
-                <div class="w-full flex flex-col">
-                    <Header />
-                    <div class="h-full w-full flex flex-row items-stretch text-foreground">
-                        <Navigation v-model="navOpen" :nav-items="navigation.navItems"
-                            :nav-sections="navigation.navSections" />
-                        <div class="min-w-[0px] w-full flex flex-col transition-all lg:p-2 lg:ps-0">
-                            <div
-                                class="h-full w-full border border-border lg:rounded-md bg-background dark:bg-accent:40">
-                                <div w-full mx-auto max-w-[1152px] p-4 lg:p-8>
-                                    <button ref="navButton" class="block my-3 lg:hidden" @click="toggleNav">
-                                        <div i-fluent-navigation-16-regular text-xl />
-                                    </button>
-                                    <slot />
+    <div>
+        <TooltipProvider>
+            <main ref="dynamicMain"
+                class="layoutScrollbarObtrusive  w-full h-screen min-h-screen bg-accent dark:bg-background font-display font-400 text-sm line-height-none">
+                <div class="h-full w-full flex flex-row items-stretch text-foreground">
+                    <div class="w-full flex flex-col">
+                        <Header />
+                        <div class="h-full w-full flex flex-row items-stretch text-foreground">
+                            <Navigation v-model="navOpen" :nav-items="navigation.navItems"
+                                :nav-sections="navigation.navSections" />
+                            <div class="min-w-[0px] w-full flex flex-col transition-all lg:p-2 lg:ps-0">
+                                <div
+                                    class="h-full w-full border border-border lg:rounded-md bg-background dark:bg-accent:40">
+                                    <div w-full mx-auto max-w="1152px" p-4 lg:p-8>
+                                        <button ref="navButton" class="block my-3 lg:hidden" @click="toggleNav">
+                                            <div i-fluent-navigation-16-regular text-xl />
+                                        </button>
+                                        <slot />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </main>
-    </TooltipProvider>
+            </main>
+        </TooltipProvider>
+    </div>
 </template>
 
 <style>
@@ -191,5 +193,15 @@ html {
 
 #dynamicMain {
     min-height: -webkit-fill-available;
+}
+
+.layout-enter-active,
+.layout-leave-active {
+    transition: all 0.4s;
+}
+
+.layout-enter-from,
+.layout-leave-to {
+    filter: grayscale(1);
 }
 </style>

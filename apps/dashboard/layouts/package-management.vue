@@ -21,13 +21,15 @@ const router = useRoute()
 </script>
 
 <template>
-    <NuxtLayout name="default">
-        <UxPageHeading heading="Package Management" sub-heading="View and manage internet plans"/>
-        <div mt-8>
-            <Navbar :tabs="tabs"/>
-            <div class="space-y-4 mt-2rem">
-                <slot />
+    <div>
+        <NuxtLayout name="default">
+            <UxPageHeading heading="Package Management" sub-heading="View and manage internet plans"/>
+            <div mt-8>
+                <Navbar :tabs="tabs"/>
+                <div class="space-y-4 mt-2rem">
+                    <slot />
+                </div>
             </div>
-        </div>
-    </NuxtLayout>
+        </NuxtLayout>
+    </div>
 </template>
