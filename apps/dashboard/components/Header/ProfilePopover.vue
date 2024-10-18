@@ -29,7 +29,7 @@ const session = useSession()
                     <NuxtImg :src="session.data?.user.image" />
                 </button>
             </PopoverTrigger>
-            <PopoverContent class="w-[350px] p-0 border border-border rounded-xl  overflow-hidden" align="end">
+            <PopoverContent class="w-[350px] shadow-xl p-0 border border-border rounded-xl  overflow-hidden" align="end">
                 <div class=" w-full h-auto flex flex-col bg-background text-sm">
                     <div class="w-full h-auto flex flex-row items-center p-4 gap-[8px]">
                         <div class="bg-inverted w-[36px] h-[36px] rounded-full overflow-hidden border border-border">
