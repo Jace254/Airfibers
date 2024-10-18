@@ -28,7 +28,7 @@ onMounted(() => {
 <template>
   <div>
     <div class="w-0 transition-all lg:w-[330px]" />
-    <div ref="navigation" class="fixed bottom-0 z-10 w-0 transition-all top-[48px] lg:left-0 lg:w-[330px]"
+    <div ref="navigation" class="fixed bottom-0 z-10 w-0 transition-all top-[48px] lg:mt-3px lg:left-0 lg:w-[330px]"
       :class="cn(model ? 'left-0' : 'left-[-330px]')">
       <nav v-element-size="onResize"
         class="relative h-full max-w-[min(-40px_+_100vw,330px)] flex flex-col duration-[0.05s] delay-[0s] ease-[ease-in-out] max-lg:min-w-[220px] max-lg:border max-lg:border-border max-lg:bg-background lg:transition-opacity max-lg:transition-box-shadow"
