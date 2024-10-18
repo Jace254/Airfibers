@@ -22,7 +22,7 @@ const router = useRoute()
 
 <template>
     <NuxtLayout name="default">
-        <UxPageHeading text="Package Management"/>
+        <UxPageHeading heading="Package Management" sub-heading="View and manage internet plans"/>
         <div mt-8>
             <Navbar :tabs="tabs"/>
             <div class="space-y-4 mt-2rem">

@@ -1,3 +1,3 @@
 <template>
-    <UxPageHeading text="Create Bandwidth" />
+    <UxPageHeading heading="Create Bandwidth" />
 </template>

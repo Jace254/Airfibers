@@ -1,8 +1,8 @@
 <script setup lang="ts">
+
 definePageMeta({
     layout: 'package-management'
 })
-
 </script>
 
 <template>
